@@ -8,35 +8,56 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Flurferry purple-themed design system */
+    --background: 342 15% 97%;
+    --foreground: 342 15% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 342 20% 98%;
+    --card-foreground: 342 15% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 342 20% 98%;
+    --popover-foreground: 342 15% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Rich purple primary from logo */
+    --primary: 320 45% 55%;
+    --primary-foreground: 342 20% 98%;
+    --primary-glow: 320 65% 70%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Soft cream secondary */
+    --secondary: 342 25% 92%;
+    --secondary-foreground: 342 20% 20%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted purples */
+    --muted: 342 20% 94%;
+    --muted-foreground: 342 10% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent purple */
+    --accent: 320 35% 85%;
+    --accent-foreground: 342 25% 25%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 342 20% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 342 15% 88%;
+    --input: 342 15% 88%;
+    --ring: 320 45% 55%;
 
-    --radius: 0.5rem;
+    /* Design tokens */
+    --radius: 1rem;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(320 45% 55%), hsl(320 65% 70%));
+    --gradient-hero: linear-gradient(135deg, hsl(320 45% 55%) 0%, hsl(305 55% 65%) 50%, hsl(285 65% 75%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(342 25% 96%), hsl(342 20% 98%));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(320 45% 55% / 0.15);
+    --shadow-card: 0 8px 32px -8px hsl(320 25% 35% / 0.12);
+    --shadow-glow: 0 0 40px hsl(320 65% 70% / 0.3);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
