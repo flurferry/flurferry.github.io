@@ -4,8 +4,6 @@ import heroImage from "@/assets/hero-beanbag.jpg";
 const Hero = () => {
   return (
     <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-hero opacity-90" />
       
       {/* Background image */}
       <div 
