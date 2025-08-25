@@ -2,6 +2,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Heart, ShoppingCart } from "lucide-react";
+import purpleHoodieImage from "@/assets/purple-hoodie-product.jpg";
+import beanbagCreamImage from "@/assets/beanbag-cream-product.jpg";
+import blanketBeigeImage from "@/assets/blanket-beige-product.jpg";
+import sherpaPantsImage from "@/assets/sherpa-pants-product.jpg";
+import pinkTeddyCoatImage from "@/assets/pink-teddy-coat-product.jpg";
+import whiteFuzzySweaterImage from "@/assets/white-fuzzy-sweater-product.jpg";
+import camelOttomanImage from "@/assets/camel-ottoman-product.jpg";
+import sagePulloverImage from "@/assets/sage-pullover-product.jpg";
 
 const products = [
   {
@@ -9,7 +17,7 @@ const products = [
     name: "Ultra Soft Purple Fleece Hoodie",
     price: 89.99,
     originalPrice: 119.99,
-    image: "/lovable-uploads/1bd6e70f-5d78-4265-8702-dbd0316347e4.png",
+    image: purpleHoodieImage,
     category: "Clothing",
     rating: 4.8,
     reviews: 124,
@@ -20,7 +28,7 @@ const products = [
     name: "Luxury Fluffy Bean Bag Chair",
     price: 299.99,
     originalPrice: 399.99,
-    image: "/lovable-uploads/1bd6e70f-5d78-4265-8702-dbd0316347e4.png",
+    image: beanbagCreamImage,
     category: "Furniture",
     rating: 4.9,
     reviews: 89,
@@ -31,7 +39,7 @@ const products = [
     name: "Premium Fleece Throw Blanket",
     price: 59.99,
     originalPrice: 79.99,
-    image: "/lovable-uploads/1bd6e70f-5d78-4265-8702-dbd0316347e4.png",
+    image: blanketBeigeImage,
     category: "Blankets",
     rating: 4.7,
     reviews: 156,
@@ -41,10 +49,52 @@ const products = [
     id: 4,
     name: "Cozy Sherpa Lounge Pants",
     price: 49.99,
-    image: "/lovable-uploads/1bd6e70f-5d78-4265-8702-dbd0316347e4.png",
+    image: sherpaPantsImage,
     category: "Clothing",
     rating: 4.6,
     reviews: 203,
+    isNew: false
+  },
+  {
+    id: 5,
+    name: "Pink Fluffy Teddy Coat",
+    price: 149.99,
+    originalPrice: 199.99,
+    image: pinkTeddyCoatImage,
+    category: "Clothing",
+    rating: 4.9,
+    reviews: 87,
+    isSale: true
+  },
+  {
+    id: 6,
+    name: "White Fuzzy Oversized Sweater",
+    price: 79.99,
+    image: whiteFuzzySweaterImage,
+    category: "Clothing",
+    rating: 4.5,
+    reviews: 145,
+    isNew: true
+  },
+  {
+    id: 7,
+    name: "Camel Fluffy Ottoman Chair",
+    price: 199.99,
+    originalPrice: 249.99,
+    image: camelOttomanImage,
+    category: "Furniture",
+    rating: 4.8,
+    reviews: 76,
+    isBestseller: true
+  },
+  {
+    id: 8,
+    name: "Sage Green Fleece Pullover",
+    price: 69.99,
+    image: sagePulloverImage,
+    category: "Clothing",
+    rating: 4.7,
+    reviews: 192,
     isNew: false
   }
 ];
@@ -62,17 +112,19 @@ const FeaturedProducts = () => {
           </p>
         </div>
         
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {products.map((product) => (
             <Card 
               key={product.id}
               className="group cursor-pointer overflow-hidden border-0 shadow-soft hover:shadow-card transition-all duration-300 transform hover:scale-105"
             >
               <div className="relative overflow-hidden">
-                <div className="aspect-square bg-gradient-card p-8">
-                  <div className="w-full h-full bg-primary/20 rounded-lg flex items-center justify-center">
-                    <span className="text-primary/60 text-sm">Product Image</span>
-                  </div>
+                <div className="aspect-square bg-gradient-card overflow-hidden">
+                  <img 
+                    src={product.image} 
+                    alt={product.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
                 </div>
                 
                 {/* Badges */}

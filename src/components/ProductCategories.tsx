@@ -1,29 +1,29 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import clothingImage from "@/assets/clothing-hero.jpg";
-import blanketImage from "@/assets/blanket-hero.jpg";
-import furnitureImage from "@/assets/furniture-hero.jpg";
+import purpleHoodieImage from "@/assets/purple-hoodie-product.jpg";
+import blanketBeigeImage from "@/assets/blanket-beige-product.jpg";
+import beanbagCreamImage from "@/assets/beanbag-cream-product.jpg";
 
 const categories = [
   {
     id: "clothing",
     title: "Fluffy Clothing",
     description: "Cozy fleece jackets, hoodies, and loungewear",
-    image: clothingImage,
-    count: "24 Products"
+    image: purpleHoodieImage,
+    count: "32 Products"
   },
   {
     id: "blankets",
     title: "Soft Blankets",
     description: "Ultra-soft throws and luxury bedding",
-    image: blanketImage,
+    image: blanketBeigeImage,
     count: "18 Products"
   },
   {
     id: "furniture",
     title: "Fluffy Furniture",
     description: "Bean bags, chairs, and cozy seating",
-    image: furnitureImage,
+    image: beanbagCreamImage,
     count: "12 Products"
   }
 ];
